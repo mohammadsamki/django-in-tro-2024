@@ -5,33 +5,17 @@
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
-        {% load bootstrap5 %}
-        {% bootstrap_css %}
-        {% bootstrap_javascript %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Products</title>
+        <title>product deatels</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <a href="{% url 'loGout' %}" >logout</a>
-
-        <h1> hi iam products page </h1>
-
-
-    {% for i in products %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ i.name }}</h5>
-          <p class="card-text">{{ i.price }}</p>
-          <a href="{{ i.get_absolute_url }}" class="btn btn-primary">deatels</a>
-        </div>
-      </div>
-
-    {% endfor %}
+        <h1> {{ product.name }} </h1>
+        <h1> {{ product.discription }} </h1>
+        <h1> {{ product.price }} </h1>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
