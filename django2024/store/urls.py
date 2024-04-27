@@ -9,4 +9,5 @@ urlpatterns = [
     path('product/<int:pk>/', product_detail, name='product_detail'),
     path('account/',include('django.contrib.auth.urls')),
     path('logout/', logout, name='loGout'),
+    path('signup/', signup, name='signUp'),
 ]
